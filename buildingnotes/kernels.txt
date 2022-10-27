@@ -1,0 +1,17 @@
+[Tiny Config]
+make tinyconfig
+
+[Test Kernel]
+qemu-system-x86_64 -kernel arch/x86/boot/bzImage
+qemu-system-x86_64 -kernel arch/x86/boot/bzImage -initrd kernel-utils/initramfs.cpio.xz -append "init=/bin/sh"
+
+[Enable Config]
+x64 Support
+Networking
+Crypto
+printk
+Enable TTY
+initramfs support
+initramfs XZ
+ELF Support
+Proc Support

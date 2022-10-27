@@ -1,0 +1,6 @@
+[Initramfs Tool]
+https://github.com/aweeraman/kernel-utils/
+
+[Notes]
+Compress initramfs to initramfs.cpio.xz
+$(find . | cpio -oHnewc | xz --check=crc32 -c -k --lzma2 -v9 > ${basedir}/initramfs.cpio.xz) 2>&1 | tee -a ${basedir}/log
