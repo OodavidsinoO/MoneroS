@@ -28,6 +28,7 @@ fi
 echo -n "Creating initrd filesystem... "
 mkdir ${initrd} && cd ${initrd}
 mkdir -p bin sbin etc proc sys usr/bin usr/sbin
+cp -r ${basedir}/initrd-templates/* ${initrd}
 cp ${confdir}/init ${initrd}/init
 chmod a+x ${initrd}/init
 echo "ok"
