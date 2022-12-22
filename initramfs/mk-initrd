@@ -23,6 +23,8 @@ if [ -e ${initrd} ]; then
   echo -n "Removing existing initrd, press ENTER to proceed... "
   read input
   rm -rf ${initrd}
+  rm -f ${basedir}/rootfs.xz
+  rm -f ${basedir}/log
 fi
 
 echo -n "Creating initrd filesystem... "
@@ -51,5 +53,11 @@ cp ${confdir}/busybox.config ${busyboxdir}/.config
 echo -n "Building initrd... "
 (
   cd ${initrd}
-  $(find . | cpio -oHnewc | xz --check=crc32 -c -k --lzma2 -v9 > ${basedir}/initramfs.cpio.xz) 2>&1 | tee -a ${basedir}/log
+  find . | cpio -R root:root -H newc -o | xz -9 --check=crc32 > ${basedir}/rootfs.xz
+)
+
+echo -n "Installing new initramfs..."
+(
+  cd ${basedir}
+  cp rootfs.xz ../isofs/rootfs.xz
 )
