@@ -11,3 +11,4 @@
 # Normal rules (sorted alphabetically)
 #
 initramfs/log
+kernel
