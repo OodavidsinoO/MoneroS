@@ -7,7 +7,7 @@ A minimal linux from scratch distro purely for mining monero (Zero Dev Fee).
 First install the dependencies:
 
 ```bash
-sudo apt install wget make gawk gcc bc bison flex xorriso libelf-dev libssl-dev
+sudo apt install wget make gawk gcc bc bison flex xorriso libelf-dev libssl-dev git build-essential cmake automake libtool autoconf
 ```
 
 Then run the build script:
