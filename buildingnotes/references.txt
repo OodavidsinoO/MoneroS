@@ -1,2 +1,0 @@
-https://weeraman.com/building-a-tiny-linux-kernel-8c07579ae79d
-http://minimal.idzona.com/#home
