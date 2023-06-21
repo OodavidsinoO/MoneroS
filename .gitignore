@@ -17,3 +17,5 @@
 /src/*.img
 /src/*.tgz
 /src/*.iso
+
+.vscode/**
