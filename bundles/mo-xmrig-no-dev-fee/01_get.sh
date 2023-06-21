@@ -2,7 +2,7 @@
 
 set -e
 
-. ../../common.sh
+. ../../src/moneros_overlay/common.sh
 
 # Read the common configuration properties.
 BASE_URL=`read_property MOXMRIG_URL`
@@ -19,8 +19,7 @@ cd $MAIN_SRC_DIR/source/overlay
 # Delete folder with previously extracted mo-xmrig-no-dev-fee.
 echo "Removing $BUNDLE_NAME work area. This may take a while."
 rm -rf $WORK_DIR/overlay/$BUNDLE_NAME
-mkdir $WORK_DIR/overlay/$BUNDLE_NAME
 
-git clone $BASE_URL $WORK_DIR/overlay/
+git clone $BASE_URL $WORK_DIR/overlay/$BUNDLE_NAME
 
 cd $SRC_DIR

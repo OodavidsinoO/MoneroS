@@ -2,7 +2,7 @@
 
 set -e
 
-. ../../common.sh
+. ../../src/moneros_overlay/common.sh
 
 echo "Removing old '$BUNDLE_NAME' artifacts. This may take a while."
 rm -rf $DEST_DIR
@@ -18,6 +18,11 @@ cp -r $MAIN_SRC_DIR/work/overlay/$BUNDLE_NAME/src/config.json etc/mo-xmrig-confi
 
 chmod +rx bin/mo-xmrig
 chmod 777 etc/mo-xmrig-config.json
+
+# With '--remove-destination' all possibly existing soft links in
+# '$OVERLAY_ROOTFS' will be overwritten correctly.
+cp -r --remove-destination $DEST_DIR/* \
+  $OVERLAY_ROOTFS
 
 echo "Bundle 'mo-xmrig-no-dev-fee' has been installed."
 

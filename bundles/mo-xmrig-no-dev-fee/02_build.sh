@@ -2,7 +2,7 @@
 
 set -e
 
-. ../../common.sh
+. ../../src/moneros_overlay/common.sh
 
 cd $WORK_DIR/overlay/$BUNDLE_NAME
 
