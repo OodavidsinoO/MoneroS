@@ -4,12 +4,13 @@ set -e
 
 . ../../common.sh
 
-cd $WORK_DIR/overlay/$BUNDLE_NAME/$BUNDLE_NAME
+cd $WORK_DIR/overlay/$BUNDLE_NAME
 
-echo "Generating source files."
-./code-generator.py
+mkdir build && cd scripts
+./build_deps.sh && cd ../build
 
+cmake .. -DXMRIG_DEPS=scripts/deps -DBUILD_STATIC=ON
 echo "Building $BUNDLE_NAME."
-make
+make -j$(nproc)
 
 cd $SRC_DIR

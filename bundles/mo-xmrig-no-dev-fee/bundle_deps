@@ -1,3 +1,4 @@
-glibc_libpthread
-glibc_librt
-libgcc1
+# glibc_libpthread
+# glibc_librt
+# libgcc1
+glibc_libc

@@ -10,5 +10,10 @@
 #
 # Normal rules (sorted alphabetically)
 #
-initramfs/log
-kernel
+!.gitignore
+
+/src/source/**
+/src/work/**
+/src/*.img
+/src/*.tgz
+/src/*.iso
