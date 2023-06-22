@@ -6,7 +6,7 @@ A minimal linux from scratch distro purely for mining monero (Zero Dev Fee).
 ## Download 💾
 
 You can download the iso image from the [releases](https://github.com/OodavidsinoO/MoneroS/releases)
-There are two versions of the iso image, one is for local booting and the other is for network booting.
+There are two versions of the iso image, one is for local booting and the other is for network booting (LMAO TODO).
 
 ## How to build 🔨
 
