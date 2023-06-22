@@ -24,14 +24,16 @@
 #                    |
 #                    +--(2) /bin/sh (Alt + F4)
 
-echo -e "Welcome to \\e[1mMinimal \\e[32mLinux \\e[31mLive\\e[0m (/sbin/init)"
+echo -e "Welcome to \\e[0;33mMoneroS Mining Linux\\e[0m~ (/sbin/init)"
+echo -e "Version: \\e[0;33m$(cat /etc/version)\\e[0m"
+echo -e "Author: \\e[0;32mDavid Sin\\e[0m"
 
 # Autorun functionality
 if [ -d /etc/autorun ] ; then
 for AUTOSCRIPT in /etc/autorun/*
   do
     if [ -f "$AUTOSCRIPT" ] && [ -x "$AUTOSCRIPT" ]; then
-      echo -e "Executing \\e[32m$AUTOSCRIPT\\e[0m in subshell."
+      echo -e "[AUTORUN] Executing \\e[32m$AUTOSCRIPT\\e[0m in subshell."
       $AUTOSCRIPT
     fi
   done

@@ -1,4 +1,6 @@
-[1m  This is PID 1 rescue shell inside the initramfs area. Execute the following in
+[1m[0;91m
+  [WARNING] Dropping into emergency shell inside initramfs. [0m[0;33m Cause: [0m[1m[0;32m Manual Intervention[0m[1m  
+  This is PID 1 rescue shell inside the initramfs area. Execute the following in
   order to continue with the overlay initialization process:
 [1m[32m
   exec /etc/02_overlay.sh

@@ -24,7 +24,9 @@
 #                    |
 #                    +--(2) /bin/sh (Alt + F4)
 
-echo -e "Welcome to \\e[1mMinimal \\e[32mLinux \\e[31mLive\\e[0m (/init)"
+echo -e "Welcome to \\e[0;33mMoneroS Mining Linux\\e[0m~"
+echo -e "Version: \\e[0;33m$(cat /etc/version)\\e[0m"
+echo -e "Author: \\e[0;32mDavid Sin\\e[0m"
 
 # Let's mount all core file systems.
 /etc/01_prepare.sh
@@ -51,7 +53,7 @@ fi
 # the script '/etc/03_init.sh' as the new init process.
 exec /etc/02_overlay.sh
 
-echo "(/init) - you can never see this unless there is a serious bug."
+echo "[/init] \\e[0;31mERROR:\\e[0m Serious error occurred."
 
 # Wait until any key has been pressed.
 read -n1 -s

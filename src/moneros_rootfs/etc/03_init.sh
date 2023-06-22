@@ -59,7 +59,7 @@ else
   fi
 fi
 
-echo "(/etc/03_init.sh) - there is a serious bug."
+echo "[/etc/03_init.sh] \\e[0;31mERROR:\\e[0m Serious error occurred."
 
 # Wait until any key has been pressed.
 read -n1 -s
