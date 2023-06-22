@@ -19,6 +19,7 @@ fi
 rm -rf $DEST_DIR
 
 echo "Configuring '$BUNDLE_NAME'."
+./autogen.sh
 CFLAGS="$CFLAGS" ./configure \
   --prefix=/usr
 
