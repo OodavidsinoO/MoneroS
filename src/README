@@ -1,21 +1,3 @@
-The easiest way to build 'MoneroS Linux Live' is to run the following script:
-
-  ./build_minimal_linux_live.sh
-
-Note that the build process requires proper toolchain already installed and
-configured. Check the project website for more information:
-
-  http://minimal.idzona.com
-
-For Ubuntu and other Debian based operating systems you can use the following
-command in order to resolve the required build dependencies:
-
-  sudo apt install wget make gawk gcc bc bison flex xorriso libelf-dev libssl-dev
-
-Once you have your ISO image up and running perhaps you'd like to examine the
-configuration file '.config' and see what options you have there. For example,
-you can change the property 'OVERLAY_BUNDLES' and build your own flavor of MLL.
-
 Currently available overlay bundles:
 
   all            - this indicates to build all available overlay bundles. This
@@ -199,16 +181,3 @@ by MoneroS Linux Live.
 As already mentioned, the main configuration file is '.config'. It is
 extensively documented and you can refer to it for detailed information
 regarding all configuration properties.
-
-###   ###   ###
-
-I only provide the build scripts. It's entirely up to you to configure and
-prepare your build environment. I use Linux Mint and Ubuntu, both 32 and 64 bit
-editions. Your distribution might have different build dependencies but most of
-the time there is a single meta-package which installs most of the stuff that
-you need.
-
-The build process is slow, so be prepared to wait. In the end you should have
-the ISO image file 'minimal_linux_live.iso' in the same folder where you
-started the build process. You can burn the ISO image on CD/DVD or (better) run
-it with PC emulator like QEMU, VirtualBox or VMware Workstation Player.

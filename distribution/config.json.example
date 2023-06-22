@@ -4,10 +4,10 @@
         "worker-id": null
     },
     "http": {
-        "enabled": true,
+        "enabled": false,
         "host": "127.0.0.1",
-        "port": 8080,
-        "access-token": "moneros",
+        "port": 0,
+        "access-token": null,
         "restricted": true
     },
     "autosave": true,
@@ -68,7 +68,7 @@
             "url": "gulf.moneroocean.stream:10128",
             "user": "4AXTT8JDDZCd14LECV8dCQ1WJF4s2XrMR9k5JCk89nvHKd8CtKLBpx17p3WiYFN8KkHXDDBW4hmsZbTPTqH6Cx2KM8mvNui",
             "pass": "x",
-            "rig-id": "Moner(oS)",
+            "rig-id": null,
             "nicehash": false,
             "keepalive": true,
             "enabled": true,
